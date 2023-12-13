@@ -1,0 +1,77 @@
+/* style.css */
+
+/* Container for the entire timeline */
+.timeline-container {
+  display: flex;
+}
+
+/* Left column for displaying events */
+.timeline-events {
+  flex: 3;
+  overflow-y: auto;
+  height: 80vh; /* 80% of the viewport height */
+  padding: 10px;
+}
+
+/* Right column for highlighting days */
+.timeline-highlighted-days {
+  flex: 1;
+  border-left: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Highlighted day */
+.highlighted-day {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Highlighted day when visible in the timeline */
+.highlighted-day.highlighted {
+  background-color: #e0e0e0;
+}
+
+/* Event circle */
+.event-circle {
+  background-color: #3498db;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Event card */
+.event-card {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+}
+
+/* Show event card on hover */
+.event-circle:hover .event-card {
+  display: block;
+}
+
+/* Additional styling for the scrollbar in the events column */
+.timeline-events::-webkit-scrollbar {
+  width: 8px;
+}
+
+.timeline-events::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 4px;
+}
+
+/* Additional styling for the scrollbar in the highlighted days column */
+.timeline-highlighted-days::-webkit-scrollbar {
+  width: 8px;
+}
+
+.timeline-highlighted-days::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 4px;
+}
